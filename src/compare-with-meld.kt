@@ -63,6 +63,9 @@ class ContextMenuFactory: IContextMenuFactory {
         else if(osName.equals("Mac OS X")) {
             return "/Applications/Meld.app/Contents/MacOS/Meld"
         }
+        else if(osName.startsWith("Linux")) {
+            return "/usr/bin/meld"
+        }
         else {
             throw Exception("Unknown OS $osName")
         }
